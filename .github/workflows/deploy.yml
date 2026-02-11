@@ -15,10 +15,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install, build, and upload
-        uses: withastro/action@v3
-        # with:
-        #   path: . # Root of the repo
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: perito-gabinete-web/package-lock.json
+      - name: Install dependencies
+        run: cd perito-gabinete-web && npm install
+      - name: Build Astro
+        run: cd perito-gabinete-web && npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: perito-gabinete-web/dist
 
   deploy:
     needs: build
