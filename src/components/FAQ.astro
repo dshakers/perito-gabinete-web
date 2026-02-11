@@ -1,0 +1,52 @@
+---
+const faqs = [
+  {
+    question: "¿Qué validez tiene un informe pericial de parte?",
+    answer: "Un informe pericial de parte tiene plena validez jurídica como prueba documental y pericial, siempre que esté redactado por un profesional titulado y colegiado, y siga los principios de objetividad y rigor técnico."
+  },
+  {
+    question: "¿Cuánto tiempo se tarda en emitir un dictamen?",
+    answer: "El plazo varía según la complejidad del caso. Un informe estándar suele emitirse en 7-10 días hábiles tras la recopilación de todas las evidencias necesarias."
+  },
+  {
+    question: "¿Es obligatoria la ratificación en el juzgado?",
+    answer: "No siempre, pero es altamente recomendable. Nuestros peritos están preparados para defender el informe ante el juez, respondiendo a las preguntas de las partes con solvencia técnica."
+  },
+  {
+    question: "¿Realizan informes para particulares o solo para abogados?",
+    answer: "Trabajamos tanto para despachos de abogados y compañías aseguradoras como para particulares que necesiten una prueba técnica sólida para reclamaciones o defensas."
+  }
+];
+---
+
+<section id="faq" class="py-32 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-20">
+        <h2 class="text-sm font-bold text-indigo-600 uppercase tracking-[0.4em] mb-4">Dudas Frecuentes</h2>
+        <h3 class="text-4xl font-bold tracking-tighter text-slate-900">Resolviendo sus <span class="text-indigo-600">inquietudes técnicas</span>.</h3>
+    </div>
+
+    <div class="space-y-6">
+        {faqs.map(faq => (
+            <div class="group border border-slate-200 rounded-3xl p-8 hover:border-indigo-200 hover:bg-slate-50 transition-all duration-300">
+                <h4 class="text-xl font-bold text-slate-900 mb-4 flex items-center justify-between">
+                    {faq.question}
+                    <span class="text-indigo-600 group-hover:rotate-180 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </h4>
+                <p class="text-slate-500 leading-relaxed font-medium">
+                    {faq.answer}
+                </p>
+            </div>
+        ))}
+    </div>
+
+    <div class="mt-20 text-center">
+        <p class="text-slate-400 font-bold uppercase tracking-widest text-xs mb-6">¿Tiene otra pregunta?</p>
+        <a href="#contacto" class="text-indigo-600 font-black text-xl hover:underline decoration-cyan-400 underline-offset-8">
+            Consultar con un perito ahora &rarr;
+        </a>
+    </div>
+  </div>
+</section>
