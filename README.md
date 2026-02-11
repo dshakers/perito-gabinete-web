@@ -1,17 +1,24 @@
-# Gabinete Pericial Web
+# Gabinete Pericial Web (V2)
 
-Proyecto desarrollado con **Astro** y **Tailwind CSS**.
+Premium landing page for legal and technical experts. Built with Astro and Tailwind CSS for maximum authority and performance.
 
-## Estructura
-- `src/pages/index.astro`: Página principal.
-- `astro.config.mjs`: Configuración de Astro e integraciones.
-- `tailwind.config.mjs`: Configuración de estilos.
+## 🚀 Technical Stack
+- **Framework:** [Astro 4](https://astro.build/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** Custom SVG
+- **Deployment:** GitHub Pages / Vercel
 
-## Desarrollo
+## 📁 Structure
+- `src/layouts/`: Base HTML wrappers.
+- `src/components/`: Reusable UI components.
+- `src/pages/`: Route definitions (landing index).
+- `public/`: Assets and favicons.
+
+## 🛠️ Development
 ```bash
 npm install
 npm run dev
 ```
 
-## Despliegue
-Conectado a Netlify vía GitHub.
+## 📄 License
+Private project for Daniel Lianes.
